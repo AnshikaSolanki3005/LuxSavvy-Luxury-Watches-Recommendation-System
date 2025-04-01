@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import sys
 # Load the dataset
-data = pd.read_csv(r'C:\Users\anshika\PycharmProjects\luxury-watches-recommender-system\Lux_Savvy\Luxury_watch.csv')
+data = pd.read_csv('Luxury_watch.csv')
 data.columns = data.columns.str.strip()  # Strip leading/trailing spaces from column names
 data['Price (USD)'] = data['Price (USD)'].str.replace(r'[^\d]', '', regex=True)
 data['Price (USD)'] = pd.to_numeric(data['Price (USD)'], errors='coerce').astype('Int64')
